@@ -1,0 +1,45 @@
+# ============================================================
+#  React 前端 — .gitignore
+#  项目：企业授信智能风控 Agent · 前端界面
+# ============================================================
+
+# --- 依赖 ---
+node_modules/
+.pnp
+.pnp.js
+.yarn/cache
+.yarn/unplugged
+.yarn/build-state.yml
+.yarn/install-state.gz
+
+# --- 构建产物 ---
+dist/
+dist-ssr/
+build/
+.vite/
+
+# --- 日志 ---
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# --- 编辑器 ---
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# --- 环境变量 ---
+.env
+.env.local
+.env.*.local
+
+# --- 系统临时文件 ---
+*.tmp
+*.bak
+.DS_Store
+Thumbs.db
+
+# --- 本地调试文件 ---
+*.local

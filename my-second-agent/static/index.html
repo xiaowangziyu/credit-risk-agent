@@ -1,0 +1,128 @@
+<!-- ⚠️ 这是后端服务入口提示页，不是前端。
+     真正的前端代码在 credit_agent/ 目录（React + Vite）
+     开发模式下访问: http://localhost:5173/
+-->
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>企业授信智能风控 Agent · 后端服务</title>
+    <style>
+      * { box-sizing: border-box; margin: 0; padding: 0; }
+      body {
+        font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Microsoft YaHei", sans-serif;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #1f2937;
+      }
+      .card {
+        background: #fff;
+        border-radius: 16px;
+        padding: 40px 48px;
+        box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+        max-width: 560px;
+        width: 90%;
+      }
+      .badge {
+        display: inline-block;
+        background: #d1fae5;
+        color: #065f46;
+        padding: 4px 12px;
+        border-radius: 100px;
+        font-size: 12px;
+        font-weight: 600;
+        margin-bottom: 16px;
+      }
+      h1 {
+        font-size: 24px;
+        margin-bottom: 8px;
+        color: #111827;
+      }
+      .sub {
+        font-size: 14px;
+        color: #6b7280;
+        margin-bottom: 24px;
+      }
+      .api-list {
+        background: #f8f9fc;
+        border: 1px solid #e5e7ef;
+        border-radius: 10px;
+        padding: 16px;
+        margin-bottom: 20px;
+      }
+      .api-list h3 {
+        font-size: 13px;
+        color: #374151;
+        margin-bottom: 10px;
+      }
+      .api-list ul {
+        list-style: none;
+      }
+      .api-list li {
+        padding: 6px 0;
+        font-size: 13px;
+        color: #4b5563;
+        font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+      }
+      .method {
+        display: inline-block;
+        width: 50px;
+        font-size: 11px;
+        font-weight: 700;
+        color: #7c3aed;
+      }
+      .link-box {
+        background: #eef2ff;
+        border: 1px solid #c7d2fe;
+        border-radius: 10px;
+        padding: 16px 20px;
+        margin-top: 8px;
+      }
+      .link-box a {
+        color: #4f46e5;
+        font-weight: 600;
+        text-decoration: none;
+      }
+      .link-box a:hover { text-decoration: underline; }
+      .note {
+        font-size: 12px;
+        color: #6b7280;
+        margin-top: 12px;
+        line-height: 1.6;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="card">
+      <span class="badge">✅ 后端服务运行中</span>
+      <h1>企业授信智能风控 Agent</h1>
+      <p class="sub">FastAPI + ReAct Agent · 端口 8001</p>
+
+      <div class="api-list">
+        <h3>📡 可用 API 接口</h3>
+        <ul>
+          <li><span class="method">POST</span> /api/agent/analyze &nbsp;（SSE 流式 · 核心接口）</li>
+          <li><span class="method">GET</span> &nbsp;/api/companies/local</li>
+          <li><span class="method">GET</span> &nbsp;/api/companies/search/{name}</li>
+          <li><span class="method">GET</span> &nbsp;/api/applications</li>
+          <li><span class="method">GET</span> &nbsp;/api/applications/{enterprise_name}</li>
+          <li><span class="method">PUT</span> &nbsp;/api/applications/{application_id}</li>
+          <li><span class="method">POST</span> /api/applications/{application_id}/submit</li>
+          <li><span class="method">POST</span> /api/applications/{application_id}/withdraw</li>
+        </ul>
+      </div>
+
+      <div class="link-box">
+        👉 <a href="http://localhost:5173/" target="_blank">点此打开前端（React + Vite）</a>
+        <div class="note">
+          前端代码位于 <code>credit_agent/</code> 目录，由 <code>npm run dev</code> 启动于端口 5173。<br/>
+          本页面仅为后端状态提示，不作为用户界面使用。
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,53 @@
+# ============================================================
+#  Python 后端 — .gitignore
+#  项目：企业授信智能风控 Agent
+# ============================================================
+
+# --- Python 编译产物 ---
+__pycache__/
+*.pyc
+*.pyc
+*.pyo
+*.pyd
+.Python
+*.so
+*.egg
+*.egg-info/
+dist/
+build/
+
+# --- 虚拟环境 ---
+.venv/
+venv/
+env/
+ENV/
+
+# --- 环境变量 & 数据库 ---
+.env
+.env.local
+.env.*.local
+*.db
+*.sqlite
+*.sqlite3
+
+# --- 日志 ---
+*.log
+logs/
+
+# --- 编辑器 ---
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# --- 前端构建产物（注意：构建后会生成 static/index.html 和 static/assets/）
+#  这两个目录不忽略 — 部署到 PythonAnywhere 时需要随代码一起上传
+#  （如果不想在 Git 中保存构建产物，可以把下面两行取消注释）
+# static/index.html
+# static/assets/
+
+# --- 本地临时文件 ---
+*.tmp
+*.bak
+.DS_Store
+Thumbs.db

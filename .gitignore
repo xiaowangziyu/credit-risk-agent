@@ -1,0 +1,41 @@
+# 前端依赖与构建产物
+node_modules/
+dist/
+.vite/
+.cache/
+.DS_Store
+
+# Python 依赖与缓存
+.venv/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.egg-info/
+*.egg
+*.whl
+
+# 环境变量与密钥
+.env
+.env.local
+.env.*.local
+.env.development
+.env.production
+
+# 数据库
+*.db
+*.sqlite
+*.sqlite3
+
+# 日志
+*.log
+logs/
+
+# IDE 配置
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# 操作系统
+Thumbs.db
